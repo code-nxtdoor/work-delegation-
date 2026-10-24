@@ -1,0 +1,43 @@
+# Three tiers: db (PostgreSQL) -> api (Node/Express) -> web (Carbon React served by nginx)
+# Start everything:  docker compose up --build    then open http://localhost:8080
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: delegation
+      POSTGRES_USER: delegation
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-delegation}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U delegation -d delegation"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgres://delegation:${POSTGRES_PASSWORD:-delegation}@db:5432/delegation
+      SEED_DEMO: ${SEED_DEMO:-true}
+      AUTH_MODE: ${AUTH_MODE:-dev}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build: ./frontend
+    environment:
+      API_URL: http://api:8080
+    ports:
+      - "${WEB_PORT:-8080}:8080"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

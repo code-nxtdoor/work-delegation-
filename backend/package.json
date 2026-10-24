@@ -1,0 +1,21 @@
+{
+  "name": "work-delegation-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "API tier for the Squad 3 Work Delegation Dashboard",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate": "node src/migrate.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
