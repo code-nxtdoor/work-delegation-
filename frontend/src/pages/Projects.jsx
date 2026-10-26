@@ -6,9 +6,7 @@ import { Empty, LoadError, Loading, PageHeader } from '../components.jsx';
 import { initials, timeLeft } from '../lib.js';
 
 const GROUPS = [
-  ['new', 'Interest open', 'Posted to engineers. The lead picks the team when the window closes.'],
-  ['progress', 'In progress', 'Resources here count against bandwidth.'],
-  ['hold', 'On hold', 'Teams stay listed but are not counted as busy.']
+  ['new', 'Interest open', 'Posted to engineers. The lead picks the team when the window closes.']
 ];
 
 export default function Projects() {
