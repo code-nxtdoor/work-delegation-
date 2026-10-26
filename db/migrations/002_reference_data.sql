@@ -30,7 +30,7 @@ ON CONFLICT DO NOTHING;
 INSERT INTO roles(name) VALUES
   ('Engagement lead'),('AI engineer'),('Platform engineer'),('Data engineer'),
   ('Solution engineer'),('Front-end engineer'),('Associate engineer'),
-  ('Strategy designer'),('Solution architect')
+  ('Strategy designer'),('Solution architect'),('Manager')
 ON CONFLICT DO NOTHING;
 
 INSERT INTO role_requirements(role, skill, min_rating) VALUES

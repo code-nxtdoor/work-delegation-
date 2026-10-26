@@ -3,9 +3,8 @@
 
 INSERT INTO people(email, name, role, is_lead, is_engineer, availability, last_checkin, goals, onboarded) VALUES
  ('keylia.carter@ibm.com',   'Keylia Carter',       'Engagement lead',   true,  false, 3, now(), '', true),
- ('charles@ibm.com',         'Charles',             'Engagement lead',   true,  false, 3, now(), '', true),
- ('joe.camera@ibm.com',      'Joe Camera',          'Engagement lead',   true,  false, 3, now(), '', true),
- ('agborntui.bate@ibm.com',  'Agborntui Bate',      'Platform engineer', false, true,  3, now()-interval '1 day',  '', false),
+ ('agborntui.bate@ibm.com',   'Charles Bate',       'Engagement lead',   true,  false, 3, now(), '', true),
+ ('joe.camera@ibm.com',      'Joe Camera',          'Manager',   true,  false, 3, now(), '', true),
  ('alisa.vinogradova@ibm.com','Alisa Vinogradova',  'Strategy designer', false, true,  3, now()-interval '1 day',  '', false),
  ('anisha.parida@ibm.com',   'Anisha Parida',       'Platform engineer', false, true,  3, now()-interval '1 day',  '', false),
  ('ashley.burbano@ibm.com',  'Ashley Burbano',      'Strategy designer', false, true,  3, now()-interval '1 day',  '', false),
@@ -17,7 +16,7 @@ INSERT INTO people(email, name, role, is_lead, is_engineer, availability, last_c
  ('marc.wangel@ibm.com',     'Marc Wangel',         'Solution architect',false, true,  3, now()-interval '1 day',  '', false),
  ('maya.nagiub@ibm.com',     'Maya Nagiub',         'AI engineer',       false, true,  3, now()-interval '1 day',  '', false),
  ('michelle.shin@ibm.com',   'Michelle Shin',       'Strategy designer', false, true,  3, now()-interval '1 day',  '', false),
- ('ceasar.ugwuanyi@ibm.com', 'Ceasar Ugwuanyi',     'Platform engineer',       false, true,  3, now()-interval '1 day',  '', false),
+ ('munachiso.ugwuanyi@ibm.com', 'Munachiso Ugwuanyi',  'Platform engineer',       false, true,  3, now()-interval '1 day',  '', false),
  ('patrice.johnson@ibm.com', 'Patrice Johnson',     'Engagement lead',   false,  false, 3, now()-interval '1 day',  '', false),
  ('robert.campbell@ibm.com', 'Robert Campbell',     'Solution architect',false, true,  3, now()-interval '1 day',  '', false),
  ('shawn.kenney@ibm.com',    'Shawn Kenney',        'Strategy designer', false, true,  3, now()-interval '1 day',  '', false);
